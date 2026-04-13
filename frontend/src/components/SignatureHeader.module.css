@@ -1,0 +1,72 @@
+.banner {
+  background: var(--cedar-dark);
+  padding: 3.5rem 3rem 0;
+  display: flex; align-items: flex-end; justify-content: space-between;
+  position: relative; overflow: hidden;
+  min-height: 340px;
+}
+
+.left {
+  position: relative; z-index: 2;
+  padding-bottom: 3rem; max-width: 520px;
+}
+
+.eyebrow {
+  font-family: var(--font-jp);
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--matcha-mid); margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 8px;
+}
+.eyebrow::before {
+  content: ''; display: block;
+  width: 24px; height: 1px; background: var(--matcha-mid);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 8vw, 96px);
+  font-weight: 600; color: #fff;
+  line-height: 0.9; letter-spacing: -2px;
+  margin-bottom: 0.5rem;
+}
+.wordmark em { font-style: italic; color: var(--matcha-mid); }
+
+.jpLine {
+  font-family: var(--font-jp);
+  font-size: clamp(15px, 2vw, 20px);
+  font-weight: 300; color: rgba(255,255,255,0.55);
+  letter-spacing: 0.15em; margin-top: 0.75rem; margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 13px; color: rgba(255,255,255,0.4);
+  line-height: 1.75; font-family: var(--font-jp); font-weight: 300;
+}
+
+.right {
+  position: relative; z-index: 2;
+  padding-bottom: 0;
+  display: flex; align-items: flex-end;
+  flex-shrink: 0;
+}
+
+/* Decorative bg circles */
+.decoCircle {
+  position: absolute; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.06);
+  pointer-events: none;
+}
+.dc1 { width: 320px; height: 320px; top: -80px; right: 200px; }
+.dc2 { width: 180px; height: 180px; top: 20px;  right: 60px;  }
+.dc3 {
+  width: 500px; height: 500px; bottom: -200px; right: -100px;
+  border-color: rgba(127,156,120,0.08);
+}
+
+/* Washi-white arc at bottom */
+.arc {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+  background: var(--washi);
+  clip-path: ellipse(55% 100% at 50% 100%);
+  pointer-events: none;
+}

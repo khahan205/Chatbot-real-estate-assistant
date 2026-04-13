@@ -1,0 +1,80 @@
+.card {
+  background: #fff; border-radius: 16px;
+  border: 1px solid var(--washi-darker);
+  overflow: hidden; cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: var(--shadow-card);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+
+.imgWrap {
+  height: 180px; position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.emoji { font-size: 60px; filter: drop-shadow(0 2px 6px rgba(0,0,0,.15)); }
+
+.overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(44,31,22,0.3) 100%);
+}
+
+.badges {
+  position: absolute; top: 10px; left: 10px;
+  display: flex; gap: 6px; z-index: 1;
+}
+.badge {
+  font-size: 10px; font-weight: 500;
+  padding: 3px 9px; border-radius: 20px;
+}
+.bSale { background: var(--matcha); color: #fff; }
+.bRent { background: var(--cedar);  color: #fff; }
+.bApt  { background: #2D5A8E;      color: #fff; }
+.bNew  { background: var(--accent); color: #fff; }
+.bHot  { background: var(--accent-dark); color: #fff; }
+
+.fav {
+  position: absolute; top: 10px; right: 10px; z-index: 1;
+  width: 30px; height: 30px; border-radius: 50%;
+  background: rgba(255,255,255,0.85); border: none;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; transition: all 0.2s;
+  backdrop-filter: blur(4px);
+}
+.fav:hover     { background: #fff; transform: scale(1.1); }
+.favActive { color: var(--accent); }
+
+.body    { padding: 1rem 1.1rem 1.1rem; }
+
+.price {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  color: var(--cedar); line-height: 1;
+}
+.priceSub {
+  font-family: var(--font-body);
+  font-size: 11px; font-weight: 400;
+  color: var(--stone-dark); margin-left: 2px;
+}
+
+.name {
+  font-family: var(--font-jp);
+  font-size: 13px; font-weight: 500;
+  color: var(--text-primary);
+  margin: 6px 0 4px; line-height: 1.4;
+}
+
+.loc {
+  font-size: 11px; color: var(--stone-dark);
+  display: flex; align-items: center; gap: 4px; margin-bottom: 8px;
+}
+.locDot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--matcha-mid); flex-shrink: 0;
+}
+
+.meta {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  padding-top: 8px; border-top: 1px solid var(--washi-dark);
+  font-size: 11px; color: var(--text-muted);
+}

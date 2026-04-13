@@ -1,0 +1,106 @@
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════ */
+:root {
+  /* Primary – Matcha Green */
+  --matcha:        #7F9C78;
+  --matcha-light:  #D6E3D3;
+  --matcha-mid:    #B0C5AA;
+  --matcha-dark:   #5E7A58;
+  --matcha-deep:   #3E5438;
+
+  /* Secondary – Cedar Brown */
+  --cedar:         #6B4F3A;
+  --cedar-light:   #EDE3DA;
+  --cedar-mid:     #C4A898;
+  --cedar-dark:    #4E3828;
+
+  /* Accent – Aka-Tsuchi Red */
+  --accent:        #C56A52;
+  --accent-light:  #F5DDD8;
+  --accent-dark:   #9E4D3A;
+
+  /* Neutral – Stone Gray */
+  --stone:         #BFC4C9;
+  --stone-light:   #E8EAEC;
+  --stone-dark:    #8A9099;
+
+  /* Background – Washi White */
+  --washi:         #F4F1E9;
+  --washi-dark:    #EAE6DB;
+  --washi-darker:  #DDD8CC;
+
+  /* Text */
+  --text-primary:  #2C1F16;
+  --text-body:     #4A3728;
+  --text-muted:    #8A7A6E;
+
+  /* Typography */
+  --font-jp:       'Noto Serif JP', serif;
+  --font-display:  'Cormorant Garamond', serif;
+  --font-body:     'DM Sans', sans-serif;
+
+  /* Layout */
+  --nav-h:         64px;
+
+  /* Shadows */
+  --shadow-card:  0 2px 16px rgba(107,79,58,0.08), 0 1px 4px rgba(107,79,58,0.04);
+  --shadow-hover: 0 8px 32px rgba(107,79,58,0.16), 0 2px 8px rgba(107,79,58,0.06);
+
+  /* Radius */
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+}
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--washi);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a  { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--font-body); }
+input, select { font-family: var(--font-body); }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--washi-dark); }
+::-webkit-scrollbar-thumb { background: var(--matcha-mid); border-radius: 3px; }
+
+/* ═══════════════════════════════════════════
+   UTILITY ANIMATIONS
+═══════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes tdBounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: .5; }
+  30%            { transform: translateY(-6px); opacity: 1; }
+}
+
+.anim-fu   { animation: fadeUp 0.65s ease forwards; }
+.anim-fi   { animation: fadeIn 0.4s ease forwards; }
+.delay-1   { animation-delay: .05s; opacity: 0; }
+.delay-2   { animation-delay: .15s; opacity: 0; }
+.delay-3   { animation-delay: .25s; opacity: 0; }
+.delay-4   { animation-delay: .35s; opacity: 0; }
+.delay-5   { animation-delay: .45s; opacity: 0; }
