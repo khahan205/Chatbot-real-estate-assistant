@@ -1,0 +1,8 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "app.py": {
+      "excludeFiles": "{backend/tests/**,backend/requirements-dev.txt,**/*.ipynb,**/.ipynb_checkpoints/**,data/suumo_raw_data.csv,data/yodogawa_data_cleaning.csv}"
+    }
+  }
+}

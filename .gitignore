@@ -32,8 +32,15 @@ Thumbs.db
 *.log
 
 # Project-generated artifacts
+# Notebook-generated files are ignored by default, but the backend needs
+# the runtime CSV/model artifacts below when deployed with local files.
 model/*.pkl
 data/*.csv
+
+# Keep required runtime artifacts deployable.
+!model/yodogawa_match_model.pkl
+!model/feature_columns.json
+!data/yodogawa_feature_eng.csv
 
 # Keep folder placeholders if needed
 !model/.gitkeep
